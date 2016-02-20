@@ -19,7 +19,7 @@ Current version is Beta v0.1
 </ul>
   
 ## Licensing
-Memobeaver is <a href="http://memobeaver.com/licensing.html">licensed under the MIT License</a>
+Memobeaver is <a target="_blank" href="http://memobeaver.com/licensing.html">licensed under the MIT License</a>
 
 ## Site
-The project's web address is <a href="http://memobeaver.com">http://memobeaver.com</a>
+The project's web address is <a target="_blank" href="http://memobeaver.com">http://memobeaver.com</a>
