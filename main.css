@@ -53,3 +53,9 @@ body {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 }
+#twitter {
+	width: 50%;
+	margin-left: 15%;
+	margin-bottom: 2%;	
+	margin-top: 2%;
+}
