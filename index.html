@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Memobeaver</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<!-- Import Statements -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="icon" 
+      href="favicon.ico">
+<link rel="stylesheet" href="spinner.css" />
+<!-- End Of Import Statements -->
+<link rel="stylesheet" href="main.css" />
+<script src="perm.js"></script>
+<script src="memobeaver.whole.js"></script>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+<div class="container">
+
+<!-- NAVBAR -->
+<div class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+				  
+                  <a class="navbar-brand headerlink" href="index.html">Memobeaver<sup>BETA</sup></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                  <ul class="nav navbar-nav">
+                    <li ><a id="rstBtn" class="headerlink" href="javascript:void(0)">Reset</a></li>
+                    <li class="dropdown" id="theDropDwn">
+                      <a href="javascript:void(0)" data-target="#" class="dropdown-toggle headerlink" data-toggle="dropdown">About
+                        <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a class="" href="aboutme.html">Me, the developer</a></li>
+                        <li><a class="" href="howitworks.html">How it works</a></li>
+                        <li><a class="" href="licensing.html">Licensing</a></li>
+                      </ul>
+                    </li>
+					<li><a class="headerlink" href="howtouse.html">How-To-Use</a></li>
+                  </ul>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a class="headerlink" href="donate.html">Donate<div class="ripple-container "></div></a></li>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" data-target="#" class="dropdown-toggle headerlink" data-toggle="dropdown">Contact
+                        <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+					  <li><a class="" href="feedback.php">Send Feedback</a></li>
+                        <li><a href="mailto:info@memobeaver.com" target="_blank">Email</a></li>
+                        <li><a href="https://twitter.com/memobeaver_" target="_blank">Twitter</a></li>
+						<li><a href="http://on.fb.me/20WqEMd" target="_blank">Facebook</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+<!-- END Of NAVBAR -->
+
+<div  class="resultarea">
+	<h3 class="title">Searching...</h3>
+	<p class="desc">Please be patient, Memobeaver is still in beta</p>
+	<h5 id="linkH5"><a class="link" target="_blank" href="#">Learn More</a></h5>
+</div>
+<div class="resultarea">
+	<h3 class="title">Searching...</h3>
+	<p class="desc">Please be patient, Memobeaver is still in beta</p>
+	<h5 id="linkH5"><a class="link" target="_blank" href="#">Learn More</a></h5>
+</div>
+<div class="loading">
+<div class="spinner">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
+</div>
+<div class="loading">
+<div class="spinner">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
+</div>
+<div id="inparea">
+	<input type="text" class="inper form-control" placeholder="Item Number shold come here" />
+</div>
+<button class="btn btn-default btn-md" id="addBtn"><span class="glyphicon glyphicon-plus"></span> Add New Item</button>
+<button class="btn btn-default btn-md" id="rmvBtn"><span class="glyphicon glyphicon-minus"></span> Remove Last Item</button>
+<br>
+<button class="btn btn-default btn-lg" id="goBtn">Go</button>
+<img src="memobeaver-logo.png" id="beaverImg" style="align: right; opacity: 0.85; position: fixed" 
+class="responsive-image hidden-xs hidden-sm" />
+<p id="footer">Copyright © 2016 Bence Peteri | Published under <a href="licensing.html">MIT License</a></p>
+</div>
+
+
+</body>
+</html>

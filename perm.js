@@ -1,0 +1,1 @@
+function permutations(n){return n.length?chain(n,function(t){return chain(permutations(deleted(t,n)),function(n){return[[t].concat(n)]})}):[[]]}function chain(n,t){return[].concat.apply([],n.map(t))}function deleted(n,t){return t.length?n===t[0]?t.slice(1):[t[0]].concat(deleted(n,t.slice(1))):[]}

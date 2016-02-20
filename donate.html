@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Donate - Memobeaver</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<!-- Import Statements -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="icon" 
+      href="favicon.ico">
+<script type="text/javascript" src="https://blockchain.info/Resources/wallet/pay-now-button.js"></script>
+<!-- End Of Import Statements -->
+<script>
+$(function(){
+$('.headerlink').css("color", "white");	
+});
+</script>
+<style>
+.container-fluid {
+	background-color: rgba(0, 204, 204, 0.7);
+	
+}
+.navbar-brand a {
+	color: white;
+}
+body {
+	background-color: rgba(102,255,102,0.25)
+}
+h1 {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: bolder;
+	margin-left: 2%;
+}
+h3{
+margin-left: 3%;
+}
+#footer {
+	margin-top: 10%;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<!-- NAVBAR -->
+<div class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+				  
+            <a class="navbar-brand headerlink" href="index.html">Memobeaver<sup>BETA</sup></a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown" id="theDropDwn">
+                    <a href="javascript:void(0)" data-target="#" class="dropdown-toggle headerlink" data-toggle="dropdown">
+					About<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+							<li><a class="" href="aboutme.html">Me, the developer</a></li>
+							<li><a class="" href="howitworks.html">How it works</a></li>
+							<li><a class="" href="licensing.html">Licensing</a></li>
+                        <!--<li class="divider"></li>
+                         <li class="dropdown-header">Other Products</li>
+                        <li><a href="javascript:void(0)">They'll come here in</a></li>
+                        <li><a href="javascript:void(0)">the future</a></li> -->
+						</ul>
+                </li>
+            </ul>
+                  
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="headerlink" href="donate.html">Donate<div class="ripple-container "></div></a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" data-target="#" class="dropdown-toggle headerlink" data-toggle="dropdown">
+					Contact<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="" href="feedback.php">Send Feedback</a></li>
+                        <li><a href="mailto:info@memobeaver.com" target="_blank">Email</a></li>
+                        <li><a href="https://twitter.com/memobeaver_" target="_blank">Twitter</a></li>
+						<li><a href="http://on.fb.me/20WqEMd" target="_blank">Facebook</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END Of NAVBAR -->
+<h1>Donate</h1>
+<h3>Help Memobeaver's development with donating</h3>
+<div class="jumbotron" style="padding: 1%; background-color: #A1AAAD; border-radius: 10px">
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="hosted_button_id" value="AJJK67F9LPUC8">
+		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	</form>
+</div>
+<div class="jumbotron" style="padding: 1%; background-color: #A1AAAD; border-radius: 10px">
+	<div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn"
+     data-address="1HJfawyoNdb7iAmMWAnGFHF1pFtYCXskKb"
+     data-shared="false">
+    <div class="blockchain stage-begin">
+        <img src="https://blockchain.info/Resources/buttons/donate_64.png"/>
+    </div>
+    <div class="blockchain stage-loading" style="text-align:center">
+        <img src="https://blockchain.info/Resources/loading-large.gif"/>
+    </div>
+    <div class="blockchain stage-ready">
+         <p align="center">Please Donate To Bitcoin Address: <b>[[address]]</b></p>
+         <p align="center" class="qr-code"></p>
+    </div>
+    <div class="blockchain stage-paid">
+         Donation of <b>[[value]] BTC</b> Received. Thank You.
+    </div>
+    <div class="blockchain stage-error">
+        <font color="red">[[error]]</font>
+    </div>
+	</div>
+</div>
+<div class="jumbotron" style="padding: 1%; background-color: #A1AAAD; border-radius: 10px">
+	<a href="javascript:void(0);" onclick="javascript:window.prompt ('To donate, please copy-paste my Litecoin address to your Litecoin software - I cannot do it automatically.\nTo copy it, right-click the selected text and select \'Copy\'.\nThen right-click the address field in your Litecoin software and select \'Paste\'.', 'LhRsAY9nESrAUZtv9x8H7iwKwQr4xdMgxg');">
+	<img src="./litecoindonate.png" width="176" height="72" alt="Donate Litecoin" />
+	</a>
+</div>
+<p id="footer">Copyright © 2016 Bence Peteri | Published under <a href="licensing.html">MIT License</a></p>
+</div>
+</body>
+</html>
