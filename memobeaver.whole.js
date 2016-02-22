@@ -105,8 +105,8 @@ function go(e){
 			}
 		}
 		colorses = [colors1,colors2];
-		recursive(variated1, -1, 0);
-		recursive(variated2, -1, 1);
+		recursive(variated1, variated1.length, 0);
+		recursive(variated2, variated2.length, 1);
 		$('.loading').slideDown({duration: 500, queue: false});
 	} else {
 		var colorz = [];
@@ -123,7 +123,7 @@ function go(e){
 		theList = variate(theList);
 		if(theList.length > 0) {
 			$($('.loading')[0]).slideDown({duration: 500, queue: false});
-			recursive(theList, -1, 0);
+			recursive(theList, theList.length, 0);
 		} 
 	}
 }
@@ -192,10 +192,10 @@ function placeholdInputs(){
 	}
 }
 function recursive(list, i, index){
-	$.getJSON('https://en.wikipedia.org/w/api.php?action=opensearch&search=' + list[i+1]
+	$.getJSON('https://en.wikipedia.org/w/api.php?action=opensearch&search=' + list[i-1]
 				+ '&limit=4&namespace=0&format=json&callback=?', function(data) {
 					if (json2array(data)[1].length < 1) {
-						if (i == list.length - 2) {
+						if (i == 0) {
 							$($('.title')[index]).text("Sorry, we couldn't find a solution");
 							$($('.desc')[index]).text("Our only excuse is that Memobeaver is still in beta version," +  
 							"\n but don't worry, it's getting better and better every day");
@@ -204,7 +204,7 @@ function recursive(list, i, index){
 							$($('.loading')[index]).hide();
 							
 						} else {
-						recursive(list, i+1, index) };
+						recursive(list, i-1, index) };
 					} else {
 						arrays = json2array(data);
 						var original = arrays[0];
@@ -301,6 +301,7 @@ function variateOrder(list){
 			min = list[i].length;
 		}
 	}
+	if (min > 4) { min = 4;}
 	for (var i = 0; i <= min; i++) {	
 		var version = "";
 		for (var x = 0; x < list.length; x++) {
