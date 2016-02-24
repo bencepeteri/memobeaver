@@ -7,8 +7,6 @@
 <meta name="viewport" content="width = device-width, initial-scale = 1">
 <!-- Import Statements -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <link rel="icon" 
@@ -17,7 +15,7 @@
 <!-- End Of Import Statements -->
 <link rel="stylesheet" href="main.css" />
 <script src="perm.js"></script>
-<script src="memobeaver.js"></script>
+<script src="memobeaver.whole.js"></script>
 <script type="text/javascript">
 </script>
 </head>
@@ -43,12 +41,12 @@
                       <a href="javascript:void(0)" data-target="#" class="dropdown-toggle headerlink" data-toggle="dropdown">About
                         <b class="caret"></b></a>
                       <ul class="dropdown-menu">
-                        <li><a href="aboutme.html">Me, the developer</a></li>
-                        <li><a href="howitworks.html">How it works</a></li>
-                        <li><a href="licensing.html">Licensing</a></li>
+                        <li><a href="aboutme.html" class="headerlink">Me, the developer</a></li>
+                        <li><a href="howitworks.html" class="headerlink">How it works</a></li>
+                        <li><a href="licensing.html" class="headerlink">Licensing</a></li>
 						<li class="divider"></li>
-						<li><a target="_blank" href="https://github.com/bencepeteri/memobeaver" title="Memobeaver's GitHub repo">GitHub</a></li>
-						<li><a target="_blank" href="http://memobeaver.wordpress.com" title="Memobeaver's Development Blog">Development Blog</a></li>
+						<li><a target="_blank" class="headerlink" href="https://github.com/bencepeteri/memobeaver" title="Memobeaver's GitHub repo">GitHub</a></li>
+						<li><a target="_blank" class="headerlink" href="http://memobeaver.wordpress.com" title="Memobeaver's Development Blog">Development Blog</a></li>
                       </ul>
                     </li>
 					<li><a class="headerlink" href="howtouse.html">How-To-Use</a></li>
@@ -60,10 +58,10 @@
                       <a href="javascript:void(0)" data-target="#" class="dropdown-toggle headerlink" data-toggle="dropdown">Contact
                         <b class="caret"></b></a>
                       <ul class="dropdown-menu">
-					  <li><a class="" href="feedback.php">Send Feedback</a></li>
-                        <li><a href="mailto:info@memobeaver.com" target="_blank">Email</a></li>
-                        <li><a href="https://twitter.com/memobeaver_" target="_blank">Twitter</a></li>
-						<li><a href="http://on.fb.me/20WqEMd" target="_blank">Facebook</a></li>
+					  <li><a href="feedback.php" class="headerlink">Send Feedback</a></li>
+                        <li><a href="mailto:info@memobeaver.com" class="headerlink" target="_blank">Email</a></li>
+                        <li><a href="https://twitter.com/memobeaver_" class="headerlink" target="_blank">Twitter</a></li>
+						<li><a href="http://on.fb.me/20WqEMd" class="headerlink" target="_blank">Facebook</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -73,13 +71,13 @@
 <!-- END Of NAVBAR -->
 
 <div  class="resultarea">
-	<h3 class="title">Searching...</h3>
-	<p class="desc">Please be patient, Memobeaver is still in beta</p>
+	<h3 class="title"></h3>
+	<p class="desc"></p>
 	<h5 id="linkH5"><a class="link" target="_blank" href="http://memobeaver.wordpress.com">Learn More</a></h5>
 </div>
 <div class="resultarea">
-	<h3 class="title">Searching...</h3>
-	<p class="desc">Please be patient, Memobeaver is still in beta</p>
+	<h3 class="title"></h3>
+	<p class="desc"></p>
 	<h5 id="linkH5"><a class="link" target="_blank" href="http://memobeaver.wordpress.com">Learn More</a></h5>
 </div>
 <div id="twitter">
@@ -111,8 +109,8 @@
 <button class="btn btn-default btn-md" id="rmvBtn"><span class="glyphicon glyphicon-minus"></span> Remove Last Item</button>
 <br>
 <button class="btn btn-default btn-lg" id="goBtn">Go</button>
-<img src="images/memobeaver-logo.png" id="beaverImg"	 
-class="responsive-image hidden-xs hidden-sm" />
+<!-- <img src="images/memobeaver-logo.png" id="beaverImg"	 
+class="responsive-image hidden-xs hidden-sm" /> -->
 <p id="footer">Copyright © 2016 Bence Peteri | Published under <a href="licensing.html">MIT License</a></p>
 </div>
 

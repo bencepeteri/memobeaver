@@ -8,15 +8,17 @@ function json2array(json){
 }
 $(function(){
 	$('.resultarea').hide();
+	$('.link').css('visibility', 'visible');
 	$('#twitter').hide();
 	$('.loading').hide();
 	placeholdInputs();
+	$('input').val('');
 	$('#addBtn').click(add);
 	$('#rmvBtn').click(removeLast);
 	$('#goBtn').click(go);
 	$('#rmvBtn').attr("disabled", "disabled");
 	$('#rstBtn').click(reset);
-	$('input').css('background-color', "rgba(255,255,255,0.7)");
+	$('input').css('background-color', "white");
 	$('.headerlink').css("color", "white");
 	$('.inper').first().focus();
 	$('.inper').on('paste', function(e){
@@ -105,8 +107,8 @@ function go(e){
 			}
 		}
 		colorses = [colors1,colors2];
-		recursive(variated1, variated1.length, 0);
-		recursive(variated2, variated2.length, 1);
+		search(variated1, variated1.length, 0);
+		search(variated2, variated2.length, 1);
 		$('.loading').slideDown({duration: 500, queue: false});
 	} else {
 		var colorz = [];
@@ -123,7 +125,7 @@ function go(e){
 		theList = variate(theList);
 		if(theList.length > 0) {
 			$($('.loading')[0]).slideDown({duration: 500, queue: false});
-			recursive(theList, theList.length, 0);
+			search(theList, theList.length, 0);
 		} 
 	}
 }
@@ -191,7 +193,7 @@ function placeholdInputs(){
 		e++;
 	}
 }
-function recursive(list, i, index){
+function search(list, i, index){
 	$.getJSON('https://en.wikipedia.org/w/api.php?action=opensearch&search=' + list[i-1]
 				+ '&limit=4&namespace=0&format=json&callback=?', function(data) {
 					if (json2array(data)[1].length < 1) {
@@ -204,7 +206,7 @@ function recursive(list, i, index){
 							$($('.loading')[index]).hide();
 							
 						} else {
-						recursive(list, i-1, index) };
+						search(list, i-1, index) };
 					} else {
 						arrays = json2array(data);
 						var original = arrays[0];
@@ -288,7 +290,6 @@ var colors = ["rgba(255,0,0,0.5)", "rgba(255,128,0,0.5)", "rgba(255,255,0,0.5)",
 "rgba(128,255,0,0.5)","rgba(0,255,0,0.5)", "rgba(0,255,128,0.5)", 
 "rgba(0,255,255,0.5)", "rgba(0,128,255,0.5)", "rgba(0,0,255,0.5)", 
 "rgba(127,0,255,0.5)", "rgba(255,0,255,0.5)", "rgba(255,0,127,0.5)", "rgba(128,128,128,0.5)"];
-
 	
 function variateOrder(list){
 	for (var i = 0; i < list.length; i++) {
